@@ -1,0 +1,85 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+@media (max-width: 1080px) {
+	html {
+		font-size: 93.75%;
+	}
+}
+
+@media (max-width: 720px) {
+	html {
+		font-size: 87.5%;
+	}
+}
+
+body,
+input,
+textarea,
+button {
+	font: 400 1rem var(--font-inter), sans-serif;
+	color: #808080;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 600;
+	font-family: var(--font-lexand), sans-serif;
+	color: #1f2937;
+}
+
+h1 {
+	font-size: 2rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+}
+
+button {
+	cursor: pointer;
+}
+
+strong{
+	font-family: var(--font-lexand), sans-serif;
+	font-weight: 600;
+}
+
+.emptyPlayer{
+	background: linear-gradient(143.8deg, rgba(145, 100, 250, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+	padding: 4rem;
+}
+
+footer {
+	align-self: stretch;
+	&.empty {
+		opacity: 0.5;
+	}
+}
+
+.buttons{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 2.5rem;
+	gap: 1.5rem;
+
+	&button{
+		background-color: transparent;
+		border: 0;
+		font-size: 0;
+	}
+}
