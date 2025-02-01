@@ -53,13 +53,17 @@ button {
 	cursor: pointer;
 }
 
-strong{
+strong {
 	font-family: var(--font-lexand), sans-serif;
 	font-weight: 600;
 }
 
-.emptyPlayer{
-	background: linear-gradient(143.8deg, rgba(145, 100, 250, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+.emptyPlayer {
+	background: linear-gradient(
+		143.8deg,
+		rgba(145, 100, 250, 0.8) 0%,
+		rgba(0, 0, 0, 0) 100%
+	);
 	padding: 4rem;
 }
 
@@ -70,16 +74,93 @@ footer {
 	}
 }
 
-.buttons{
+.buttons {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	margin-top: 2.5rem;
 	gap: 1.5rem;
 
-	&button{
+	&button {
 		background-color: transparent;
 		border: 0;
 		font-size: 0;
+	}
+}
+
+.homepage {
+	height: calc(100vh - 6.5rem);
+}
+
+.episodesDetails {
+	font-family: Lexend, sans-serif;
+
+	& span {
+		display: inline-block;
+		margin-top: .5rem;
+		font-size: 0.875rem;
+
+		&:last-child {
+			margin-left: .5rem;
+			padding-left: .5rem;
+			position: relative;
+
+			&::before {
+				content: "";
+				width: 4px;
+				height: 4px;
+				border-radius: 2px;
+				background-color: #DDD;
+				position: absolute;
+				left: 0;
+				top: 50%;
+				transform: translate(-50%, -50%);
+			}
+
+		}
+	}
+}
+
+.tr-btt{
+	transition: filter .2s;
+}
+
+.tr-btt:hover{
+	filter: brightness(0.95);
+}
+
+.allEpisodes{
+	& th, td{
+		padding: 0.75rem 1rem;
+		border-bottom: 1px solid #f3f4f6;
+	}
+
+	& th{
+		color: #c3c7ce;
+		text-transform: uppercase;
+		font: 500 0.75rem Lexend, sans-serif;
+		text-align: left;
+	}
+	& td{
+		font-size: 0.875rem;
+
+		img{
+			width: 2.5rem;
+			height: 2.5rem;
+			border-radius: 0.5rem;
+		}
+
+		a {
+			color: #1f2937;
+			font-family: Lexend, sans-serif;
+			font-weight: 600;
+			text-decoration: none;
+			line-height: 1.4rem;
+			font-size: 1rem;
+
+			&:hover{
+				text-decoration: underline;
+			}
+		}
 	}
 }
